@@ -1,0 +1,64 @@
+1.create repository
+git init
+
+2.add stage
+git add filename
+
+3.commit repos
+git commit -m "description"
+
+4.check command result 
+git status
+
+5.compare
+
+git diff filename  //compare between working directory and staged
+git diff --cached  //staged and HEAD
+git diff --HEAD    //working directory and HEAD
+git diff HEAD -- readme.txt //命令可以查看工作区和版本库里面最新版本的区别
+
+
+6.view commit log
+
+git log命令显示从最近到最远的提交日志
+
+git log
+git log --pretty=oneline
+
+
+7.comebak last version
+
+git reset --hard HEAD^
+git reset --hard HEAD~1 //HEAD^^ or HEAD~2
+
+--hard????????
+
+
+8.jump the one of the version
+
+git reset --hard "commit id"
+
+9. Git提供了一个命令git reflog用来记录你的每一次命令
+
+git reflog
+
+
+10.撤销修改
+
+命令git checkout -- readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：
+
+一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+
+一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+
+总之，就是让这个文件回到最近一次git commit或git add时的状态。
+
+
+
+
+
+git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区
+
+
+
+
