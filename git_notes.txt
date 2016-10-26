@@ -14,7 +14,7 @@ git status
 
 git diff filename  //compare between working directory and staged
 git diff --cached  //staged and HEAD
-git diff --HEAD    //working directory and HEAD
+git diff HEAD    //working directory and HEAD
 git diff HEAD -- readme.txt //命令可以查看工作区和版本库里面最新版本的区别
 
 
@@ -31,7 +31,6 @@ git log --pretty=oneline
 git reset --hard HEAD^
 git reset --hard HEAD~1 //HEAD^^ or HEAD~2
 
---hard????????
 
 
 8.jump the one of the version
@@ -56,7 +55,7 @@ git reflog
 
 
 
-
+11.git reset详解
 git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区
 
 
