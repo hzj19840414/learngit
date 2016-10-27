@@ -60,10 +60,15 @@ git reset HEAD file  //=git reset --mixed HEAD file
 可以把暂存区的修改撤销掉（unstage），重新放回工作区
 
 git reset --hard 
+同时重置working directory和staging area
 
 git reset --soft
+只是HEAD指针移动
 
 git reset --mixed
+重置了staging
+
+
 
 
 
