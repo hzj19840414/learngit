@@ -56,7 +56,56 @@ git reflog
 
 
 11.git reset详解
-git reset HEAD file可以把暂存区的修改撤销掉（unstage），重新放回工作区
+git reset HEAD file  //=git reset --mixed HEAD file
+可以把暂存区的修改撤销掉（unstage），重新放回工作区
+
+git reset --hard 
+
+git reset --soft
+
+git reset --mixed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
