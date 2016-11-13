@@ -12,10 +12,12 @@ git status
 
 5.compare
 
-git diff filename  //compare between working directory and staged
+git diff    //compare between working directory and staged
 git diff --cached  //staged and HEAD
-git diff HEAD    //working directory and HEAD
+git diff --HEAD    //working directory and HEAD???????
 git diff HEAD -- readme.txt //命令可以查看工作区和版本库里面最新版本的区别
+git diff master   -- readme.txt //命令可以查看工作区和版本库里面最新版本的区别
+                      //-- readme.txt It like be copared the single file ,not the tree
 
 
 6.view commit log
@@ -52,29 +54,31 @@ git reflog
 
 总之，就是让这个文件回到最近一次git commit或git add时的状态。
 
+11.cheak the stage area and repos(HEAD) 's dirctory-tree
+
+git ls-tree -l HEAD
+
+-l display the file size
+
+git ls-files -s //display staging area 's dir-tree
+
+12. cheak the git-objection ID
+git cat-file -t git-obj-ID //type is commit;tree;blob
+git cat-file -p git-obj-Id //content
 
 
+13.git reset  command 's detail
 
-11.git reset详解
-git reset HEAD file  //=git reset --mixed HEAD file
-可以把暂存区的修改撤销掉（unstage），重新放回工作区
+action 1:reset the contet(ID) in the .git/refs/heads/master
+action 2:reset the stage ,it same to  the repos .git/refs/heads/master
+action 3: reset the working area,same above
 
-git reset --hard 
-同时重置working directory和staging area
+git reset --hard <commit ID> // action 1,2,3
+git reset --soft <commit ID> //action 1
+git reset --mixed <commit ID> //action 1,2;default
 
-git reset --soft
-只是HEAD指针移动
-
-git reset --mixed
-重置了staging
-
-
-
-
-
-
-
-
+git reset //HEADzhixiangde dir-tree reset the stageing area
+git reset HEAD //same to the "git reset"
 
 
 
