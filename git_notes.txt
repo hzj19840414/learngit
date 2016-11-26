@@ -14,7 +14,6 @@ git status
 
 git diff    //compare between working directory and staged
 git diff --cached  //staged and HEAD
-git diff --HEAD    //working directory and HEAD???????
 git diff HEAD -- readme.txt //命令可以查看工作区和版本库里面最新版本的区别
 git diff master   -- readme.txt //命令可以查看工作区和版本库里面最新版本的区别
                       //-- readme.txt It like be copared the single file ,not the tree
