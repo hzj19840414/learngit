@@ -1,4 +1,4 @@
-1.create repository
+﻿1.create repository
 git init
 
 2.add stage
@@ -9,6 +9,17 @@ git commit -m "description"
 
 4.check command result 
 git status
+git status -s //--short
+e.g.
+ M readme	//modify the file only in working directory
+MM rakefile
+A  lib/git.rb	//add to staging now.-----git add lib/git.rb
+M  lib/git.mb	//modify the file and git add 
+?? license.txt	//untrack
+
+
+
+
 
 5.compare
 
@@ -79,6 +90,19 @@ git reset --mixed <commit ID> //action 1,2;default
 git reset //HEADzhixiangde dir-tree reset the stageing area
 git reset HEAD //same to the "git reset"
 
+
+14.git check out
+
+
+15.git clone
+git clone https://github.com/hzj19840414/learngit
+git clone git@github.com:hzj19840414/learngit.git
+
+//above.in working directory create folder named same as the git server
+
+rename the folder name is mylearn
+
+git clone https://github.com/hzj19840414/learngit mylearn
 
 
 
