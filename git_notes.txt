@@ -14,7 +14,7 @@ e.g.
  M readme	//modify the file only in working directory
 MM rakefile
 A  lib/git.rb	//add to staging now.-----git add lib/git.rb
-M  lib/git.mb	//modify the file and git add 
+M  lib/git.mb	//modify the file use command "git add" into the staged 
 ?? license.txt	//untrack
 
 
@@ -23,10 +23,14 @@ M  lib/git.mb	//modify the file and git add
 
 5.compare
 
-git diff    //compare between working directory and staged
-git diff --cached  //staged and HEAD
-git diff HEAD -- readme.txt //命令可以查看工作区和版本库里面最新版本的区别
-git diff master   -- readme.txt //命令可以查看工作区和版本库里面最新版本的区别
+git diff  filename  			//compare with working directory or staged;the means the last modify
+git diff --cached  filename 		//staged and HEAD
+git diff commitID1 commitID2 filename	//compare with commit1 and commit 2 in repository
+git diff commit1 filename 		//compare with commit1 and working directory
+git diff --no-index filename1 filename2	//compare with any two files in the same folder use the git native diff command
+
+git diff HEAD -- readme.txt 		//命令可以查看工作区和版本库里面最新版本的区别
+git diff master   -- readme.txt 	//命令可以查看工作区和版本库里面最新版本的区别
                       //-- readme.txt It like be copared the single file ,not the tree
 
 
@@ -92,6 +96,7 @@ git reset HEAD //same to the "git reset"
 
 
 14.git check out
+git checkout commitID_or_tag filename1 filename2	//from a commitID in repostory catch a file,files in working directory will be coverd
 
 
 15.git clone
