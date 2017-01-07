@@ -13,7 +13,7 @@ git status -s //--short
 e.g.
  M readme	//modify the file only in working directory
 MM rakefile
-A  lib/git.rb	//add to staging now.-----git add lib/git.rb
+A  lib/git.rb	//add to staging first now.-----git add lib/git.rb
 M  lib/git.mb	//modify the file use command "git add" into the staged 
 ?? license.txt	//untrack
 
