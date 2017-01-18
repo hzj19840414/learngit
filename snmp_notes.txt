@@ -1,4 +1,25 @@
-三個版本
-SNMPv1
+RRDToll
+cacti--PHP腳本
+展示
+時間序列
+Nagios
+
+
+SNMP Simple network management protocal
+1、用途：監控
+2、三個版本
+SNMPv1: Base communites
 SNMPv2c
 SNMPv3
+
+read only
+read write
+trap
+
+認證方式：基於名稱認證，like windows workgroup
+
+
+
+管理機：NMS--network Monitor station
+被監控端：Agent
+
