@@ -21,10 +21,31 @@
   hostname newswichName，设置主机名称，全局配置模式
   no hostname，恢复默认
   show running-config,特权模式
+  do,IOS版本12.3以上可用
+  shutdown/no shutdown,激活端口和关闭端口
+  description,描述
+  ip address ip地址  子网掩码;设定ip地址
+  show running-config;查看路由当前的配置
+  show startup-config;开机时的配置
+  copy running-config startup-config;保存配置
+   or
+  write
+  erase startup-config;删除配置
+  reload;从新加载
 
 4、密码设置
   enable password 123456,全局配置模式，明文
   enable secret 123456,全局配置模式，密文，如何和上一个都有设定，以这个为准
-   
+  line console 0;password 123456;login,进入控制台，设定密码，login才生效，明文
+  line vty 0 4;password 123456;login,进入虚拟终端，设定密码，login才生效，明文
+  service password-encryption,所有密码都变成密文
 
-
+5、常用show命令
+  show interface;查看一二层端口信息
+  show ip route
+  show ip interface;查看三层
+  show ip interface brief
+  show protocols
+  show ip protocols
+  show controler
+  show version;IOS的版本，有那些端
