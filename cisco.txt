@@ -49,3 +49,59 @@
   show ip protocols
   show controler
   show version;IOS的版本，有那些端
+6、vlan基础
+  1.作用：
+    交换机分割冲突域，不能分割广播域，vlan可以分割广播以
+    数据安全
+    带宽利用
+    速度
+
+  2.建立vlan
+    vlan vlanid [name vlanname],全局配置模式，直接生效
+    vlan database;vlan vlanid [name vlanname];exit,退出才生效
+    switchport accesss vlan vlanid,进入端口模式，加入vlan
+  3.vlan删除
+    no switchport access vlan vlanid,将端口从某个vlan删除
+      or
+    switchprot access vlan 1,从新加入vlan 1也等于删除
+
+  interface range f0/1-3
+  switchport access vlan vlanID,将几个端口一起加入vlan
+  interface range f0/2 ,f0/3 ,f0/6   
+
+  4.vlan查看
+  show vlan 
+  show vlan brief
+7、vlan-trunk
+  接入链路:只通过一个vlan的数据（access）
+  中继链路:可以承载多个vlan的数据（trunk）
+  封装的协议：
+    1.IEEE802.1q,插入在标准以太网帧原地址后面，4个字节，12个bit位的vlanID，4096个vlan
+    2.Cisco ISL,在原始帧前加入26头字节，后面加入4字节CRC校验，15个bit位的vlanID
+    3.异同
+      同：都是显式标记，帧被显式标记了vlan信息
+      异：IEEE802.1Q是公有协议，ISL是思科私有
+          ISL外部标记，802.1Q内部标记
+          ISL标记长度30字节，802.1Q标记长度4字节
+中继的几种模式
+开启 on:将端口设置为永久中继模式
+关闭 off:将端口设置位永久非中继模式
+企望 desirable:端口主动试图将链路变成中继
+自动 auto:端口愿意将链路变成中继链路
+desirable - auto is ok
+auto - auto is ?
+
+配置端口位Trunk
+  interface interfaceID
+  swicthport mode [access,dynamic,trunk]
+  swithcport mode dynamic [auto,desirable]
+
+查看接口模式 
+show interface interfaceID switchport,缺省为dynamic desirable
+
+swicthport trunk allowed vlan remove vlanID
+swicthport trunk allowed vlan add vlanID
+swicthport trunk encapsulation [dot1q,ISL]
+
+
+
