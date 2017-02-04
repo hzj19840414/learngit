@@ -104,4 +104,12 @@ swicthport trunk allowed vlan add vlanID
 swicthport trunk encapsulation [dot1q,ISL]
 
 
+8、vtp---vlan trunk protocol
+
+  三种模式：
+  server
+  client
+  transparent
+
+  默认server模式，默认没有域名。在同一个域里面，用trunk链接，生效。网络中第一次有交换机（server模式）命名domain,其他没有域名的设备会自动设定相同的域名。每修改一次，号会增大，如果有设备更改域名，号会清零。 
 
